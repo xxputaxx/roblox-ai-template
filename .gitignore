@@ -1,0 +1,31 @@
+# Roblox Studio 関連
+*.rbxl.lock
+*.rbxlx.lock
+
+# Rojo 自動生成
+sourcemap.json
+
+# macOS 自動生成
+.DS_Store
+**/.DS_Store
+
+# Claude Code セッション一時データ（必要に応じて）
+.claude/settings.local.json
+
+# Wally（将来のため、現時点では未使用）
+Packages/
+ServerPackages/
+DevPackages/
+wally-package.lock
+
+# Lune（将来のため）
+.lune/
+
+# エディタ
+*.swp
+*.swo
+*~
+.vscode/*.log
+
+# OS
+Thumbs.db

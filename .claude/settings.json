@@ -1,0 +1,35 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(selene:*)",
+      "Bash(stylua:*)",
+      "Bash(rojo --version)",
+      "Bash(rojo build:*)",
+      "Bash(rojo sourcemap:*)",
+      "Bash(rokit --version)",
+      "Bash(rokit list)",
+      "WebFetch(domain:rojo.space)",
+      "WebFetch(domain:create.roblox.com)",
+      "WebFetch(domain:luau-lang.org)",
+      "WebFetch(domain:devforum.roblox.com)",
+      "WebFetch(domain:kampfkarren.github.io)"
+    ]
+  },
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "Edit|Write|MultiEdit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "cd \"$CLAUDE_PROJECT_DIR\" && (selene src/ 2>&1 || true) | head -100"
+          },
+          {
+            "type": "command",
+            "command": "cd \"$CLAUDE_PROJECT_DIR\" && (stylua --check src/ 2>&1 || true) | head -50"
+          }
+        ]
+      }
+    ]
+  }
+}

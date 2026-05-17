@@ -5,7 +5,7 @@
 local Hello = {}
 
 function Hello.greet(name: string): string
-    return "Hello, " .. name .. "!"
+	return "Hello, " .. name .. "!"
 end
 
 return Hello
